@@ -1,0 +1,41 @@
+- 安装 Visual Studio Build Tools
+```bash
+winget install Microsoft.VisualStudio.2022.BuildTools
+```
+
+** 在安装界面中，确保选择"使用 C++ 的桌面开发"工作负载 **
+
+- 使用 64 位开发工具 ：
+
+- 打开 "x64 Native Tools Command Prompt for VS 2022"（确保是 64 位版本）
+- 清理之前的构建文件 ：
+
+- 在命令提示符中，导航到项目目录并清理构建文件：
+  ```bash
+  cd /d D:\workspace\freqtrade\build_helpers\py_find_1st-master
+  rd /s /q build
+  rd /s /q dist
+  rd /s /q py_find_1st.egg-info
+   ```
+  ```
+- 设置环境变量：
+```bash
+set DISTUTILS_USE_SDK=1
+set MSSdk=1
+ ```
+
+- 重新安装 ：
+
+- 在同一个命令提示符中，执行以下命令：
+  ```bash
+  python setup.py install --user
+   ```
+
+** 打包出来 `py_find_1st-1.1.7-py3.10-win-amd64.egg` **
+
+最后才正常重新安装一次：
+
+```bash
+cd build_helpers\py_find_1st-master
+python setup.py install
+ ```

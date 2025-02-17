@@ -1,6 +1,6 @@
 ### 初始化项目
 #### 安装依赖
-* pip install build_helpers/TA_Lib-0.4.32-cp310-cp310-win_amd64.whl
+* pip install build_helpers/TA_Lib-0.4.34-cp310-cp310-win_amd64.whl
 * pip install -r requirements.txt
 #### 配置 Freqtrade
 * freqtrade create-userdir --userdir user_data
